@@ -37,20 +37,20 @@ def out_put_config():
         if '-I' in opt_name :
             config_dict['input_path'] = opt_value
         if '-L' in opt_name :
-            config_dict['read_len'] = opt_value
+            config_dict['read_len'] =int(opt_value)
         if '-D' in opt_name :
-            config_dict['end_tree_len'] = opt_value
+            config_dict['end_tree_len'] = int(opt_value)
             if config_dict['same_tree_len'] == True :
-                config_dict['other_tree_len'] = opt_value
+                config_dict['other_tree_len'] = int(opt_value)
         if '-V' in opt_name :
-            config_dict['Vertical_drift'] = opt_value
+            config_dict['Vertical_drift'] = int(opt_value)
         if '-H' in opt_name :
             config_dict['Horizontal_drift'] = huiwen(opt_value)
         if  '-T' in opt_name :
-            config_dict['tag_nums'] = opt_value
+            config_dict['tag_nums'] = int(opt_value)
             config_dict['tag_mode'] = True
         if '-P' in opt_name :
-            config_dict['processes_nums'] = opt_value
+            config_dict['processes_nums'] = int(opt_value)
         if '-O' in opt_name :
             config_dict['output_file'] = opt_value+'.txt'
         if '--align' in opt_name:
