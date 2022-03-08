@@ -18,7 +18,7 @@ Clover is an efficient DNA sequence clustering algorithm, which mainly applies t
 - **-P [int]** Select the process mode, if p=0 means single process operation. p=1, 2 means 4 processes, 16 processes, and so on,respectively. We do not recommend that p is greater than 2.
 - **--no-tag** This selection needs to be added when the input file is in untagged format.
 ### Evaluating Clover Performance:
-> python main.py -I test_tag_data.txt -L 152 -p 0 -T 100
+> python main.py -I test_tag_data.txt -L 152 -P 0 -T 100
 - **-I [input_file]** Input files, as the paper is currently under review, we currently only allow input in txt format, and each line is 
 > [tag], [read]
 - **-T [int]** The total number of clusters in the file, this selection can also be left out, although it will result in no coverage in the final statistics.
