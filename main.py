@@ -37,6 +37,7 @@ class MyProcess(Process):
         self.fuzz_tree_nums= self.config_dict['Horizontal_drift']   #运行树模糊搜索的程度
         self.h_index=self.config_dict['h_index_nums']
         self.e_index=self.config_dict['e_index_nums']
+        
         self.test_num = 0
 
 
@@ -283,19 +284,19 @@ class MyProcess(Process):
                 output_file = open(self.name+"_"+self.config_dict['output_file'],'a')
                 output_file.write("[")
             while True :
-                output_nums += 0
+                output_nums += 1
                 line = f.readline()
                 if line == [] or line == "" :
                     break
-                if self.config_dict['processes_nums'] == 0:
+                if int(self.config_dict['processes_nums']) == 0:
                     self.cluster(line)
                 elif line.split()[1][:len_] == self.name :
                     self.cluster(line)
-                    if 'output_file' in self.config_dict and output_nums%100000 == 0:
-                        for i in self.index_list:
-                            output_file.write(str(i))
-                            output_file.write(',')
-                            self.index_list=[]
+                if 'output_file' in self.config_dict and output_nums%100000 == 0:
+                    for i in self.index_list:
+                        output_file.write(str(i))
+                        output_file.write(',')
+                        self.index_list=[]
             if 'output_file' in self.config_dict :
                 for i in self.index_list:
                     output_file.write(str(i))
@@ -314,7 +315,7 @@ class MyProcess(Process):
                     line = f.readline()
                     if line == [] or line == "" :
                         break
-                    if self.config_dict['processes_nums'] == 0:
+                    if int(self.config_dict['processes_nums']) == 0:
                         self.cluster(line)
                     elif line.split()[1][:len_] == self.name :
                         self.cluster(line)
@@ -352,7 +353,7 @@ class MyProcess(Process):
                     line = f.readline()
                     if line == [] or line == "" :
                         break
-                    if self.config_dict['processes_nums'] == 0:
+                    if int(self.config_dict['processes_nums']) == 0:
                         self.cluster(line)
                     elif line.split()[1][:len_] == self.name :
                         self.cluster(line)
