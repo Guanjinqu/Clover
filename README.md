@@ -1,9 +1,9 @@
 # Clover
-Clover:  An Efficient DNA Clustering algorithm based on Tree Structure
+Clover:  Tree structure-based efficient DNA clustering for DNA-based data storage
 
 
 ## What is Clover?
-Clover is an efficient DNA sequence clustering algorithm, which mainly applies to a large number of disordered DNA sequences generated after DNA sequencing in the DNA storage field. Clover has many advantages such as high efficiency, easy to use, easy to expand and low memory consumption. In our experiment, Clover could cluster 10 million sequences in about 10 seconds. In addition, we managed to cluster 10 billion DNA sequences using a home computer. Clover is written in Python, making it easy to extend. Welcome to communicate with us if you have any suggestions or questions:D
+Clover is an efficient DNA sequence clustering algorithm, which applies to a large number of disordered DNA sequences generated after DNA sequencing in the DNA storage field. Clover has many advantages such as high efficiency, easy to use, easy to expand and low memory consumption. In our experiment, Clover could cluster 10 million sequences in about 10 seconds. In addition, we managed to cluster 10 billion DNA sequences using a home computer. Clover is written in Python, making it easy to extend(Although python is slower than C, Clover's algorithms are very fast, and even faster if you use pypy!). We need to emphasize that Clover is a clustering algorithm optimized specifically for data in the DNA storage domain, and clustering datasets from other domains is difficult to produce good results.Welcome to communicate with us if you have any suggestions or questions:D
 
 ## Requirements
 - tqdm
