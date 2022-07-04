@@ -20,7 +20,7 @@ Or you can also install it from source.
 
 > git clone https://github.com/Guanjinqu/Clover.git
 
-> cd dna-clover
+> cd Clover
 
 > pip install -r requirements.txt
 
