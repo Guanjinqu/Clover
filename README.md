@@ -178,4 +178,4 @@ http://www.gnu.org/licenses/
 
 ## Citation
 
-A related paper is under review.
+Qu G, Yan Z, Wu H. Clover: tree structure-based efficient DNA clustering for DNA-based data storage[J]. Briefings in Bioinformatics, 2022, 23(5): bbac336.
