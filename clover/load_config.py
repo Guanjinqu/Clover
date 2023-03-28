@@ -78,7 +78,7 @@ def out_put_config():
             if config_dict['same_tree_len'] == True :
                 config_dict['other_tree_len'] = int(opt_value)
         if '-V' in opt_name :
-            config_dict['Vertical_drift'] = generate_vertical_drifts_list(opt_value)
+            config_dict['Vertical_drift'] = generate_vertical_drifts_list(int(opt_value))
         if '-H' in opt_name :
             config_dict['Horizontal_drift'] = int(opt_value)
         if  '-T' in opt_name :
